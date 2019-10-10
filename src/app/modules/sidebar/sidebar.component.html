@@ -1,0 +1,37 @@
+<nz-layout class="layout">
+    <nz-sider>
+      <div class="logo">Shablau</div>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item routerLink="/home" nzMatchRouter>
+          <i nz-icon nzType="home" nzTheme="outline"></i>
+          <span>Home</span>
+        </li>
+      </ul>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item routerLink="/list" nzMatchRouter>
+          <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+          <span>Lista 1</span>
+        </li>
+      </ul>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item routerLink="/list-two" nzMatchRouter>
+          <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+          <span>Lista 2</span>
+        </li>
+      </ul>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item routerLink="/list-tree" nzMatchRouter>
+          <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+          <span>Lista 3</span>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header style="text-align: center">Header</nz-header>
+      <nz-content>
+        <div class="inner-content">
+          <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>

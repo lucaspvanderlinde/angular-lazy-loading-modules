@@ -1,0 +1,11 @@
+<nz-list [nzDataSource]="usersTwo" [nzRenderItem]="item" [nzGrid]="{ gutter: 16, xs: 24, sm: 12, md: 12, lg: 12, xl: 12 }">
+  <ng-template #item let-item>
+    <nz-list-item [nzContent]="nzContent">
+      <ng-template #nzContent>
+        <nz-card [nzTitle]="item.title">
+          {{ item.body }}
+        </nz-card>
+      </ng-template>
+    </nz-list-item>
+  </ng-template>
+</nz-list>

@@ -1,0 +1,36 @@
+<nz-layout>
+
+  <nz-content>Content</nz-content>
+
+  <nz-sider [nzWidth]="360">
+      <nz-header class="header"> AUTENTICAÇÃO </nz-header>
+      <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+
+          <nz-form-item class="form-user-name">
+            <nz-form-control nzErrorTip="Por favor insira seu nome de usuário!">
+              <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input formControlName="userName" placeholder="Username"/>
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item class="form-password" [nzFlex]="center">
+            <nz-form-control nzErrorTip="Por favor insira sua senha!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nz-input formControlName="password" placeholder="Password"/>
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control>
+              <label class="label-remember" nz-checkbox formControlName="remember">
+                <span>Lembrar-me</span>
+              </label>
+              <button nz-button class="btn-login" [nzType]="'primary'" routerLink="/home">Entrar</button>
+            </nz-form-control>
+          </nz-form-item>
+
+        </form>
+  </nz-sider>
+</nz-layout>
